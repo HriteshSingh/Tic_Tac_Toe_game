@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Spice&family=Quicksand:wght@300&family=Roboto:wght@300&family=Ysabeau:wght@100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Play&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+}
+nav{
+    background-color: rgb(37,9,10);
+    height: 45px;
+    color: white;
+    display: flex;
+    align-items: center;
+    font-size: 25px;
+    padding: 0 15px;
+}
+nav ul{
+    list-style-type: none;
+    font-family: 'Quicksand', sans-serif;
+}
+.gameContainer{
+    /* background-color: yellow; */
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+}
+.container{
+    display: grid;
+    grid-template-columns: repeat(3,10vw);
+    grid-template-rows: repeat(3,10vw);
+    font-family: Verdana, sans-serif;
+    position: relative;
+}
+.box{
+    border: 1px solid black;
+    font-size: 8vw;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.box:hover{
+    background-color: rgb(205, 204, 206);
+}
+.gameInfo{
+    padding:0 40px;
+    font-family: 'Play', sans-serif;
+}
+.imgbox img{
+    width: 0px;
+    transition: width 1s ease-in-out;
+}
+.br-0{
+    border-right: 0;
+}
+.bl-0{
+    border-left: 0;
+}
+.bt-0{
+    border-top: 0;
+}
+.bb-0{
+    border-bottom: 0;
+}
+h2{
+    font-size: 50px;
+}
+.chance{
+    margin-top: 20px;
+}
+.info{
+    font-size: 20px;
+}
+.btn{
+    margin: 0 25px;
+    width: 80px;
+    height: 35px;
+    border-radius: 10px;
+    background-color: red;
+    color: white;
+    font-size: 17px;
+}
+.line{
+    /* background-color: black; */
+    height: 3px;
+    width: 0;
+    transition: width 1s ease-in-out;
+    position: absolute;
+    background-color: #911d91;
+}
+@media screen and (max-width:800px)
+{
+    .gameContainer{
+        flex-wrap: wrap;
+    }    
+    .gameInfo{
+        margin-top: 34px;
+    }
+    h2{
+        font-size: 1.8rem;
+    }
+    .container{
+        display: grid;
+        grid-template-columns: repeat(3,20vw);
+        grid-template-rows: repeat(3,20vw);
+    }
+}
